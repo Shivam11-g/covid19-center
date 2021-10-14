@@ -1,10 +1,9 @@
 import React, {
   useState
 } from 'react';
-import Modal from 'react-modal';
-import logo from './logo.svg';
 import './App.css';
 import Ninja from './ninja'
+
 
 
 
@@ -22,6 +21,7 @@ function App() {
       lng = position.coords.longitude
       console.log(lng, lat);
     });
+    
   } 
   else {
     console.log('error');
@@ -79,17 +79,19 @@ function App() {
           <form id="search"  onSubmit={handelSubmit}>
             <div>
               <label for="lat">Enter Latitude</label>
-              <input type="text" name="lat"  />
+
+              <input style={{color: 'aliceblue'}} type="text" name="lat"  />
             </div>
             <div>
               <label for="lng">Enter Longitude</label>
-              <input type="text" name="lng"  />
+              <input style={{color: 'aliceblue'}} type="text" name="lng"  />
             </div>
             <div>
               <label for="rng">Enter Range in Km</label>
               <input
                 type="text"
                 defaultValue={100000}
+                style={{color: 'aliceblue'}}
                 name="rng"
                 placeholder="100000"
                 required
